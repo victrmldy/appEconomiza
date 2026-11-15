@@ -1,4 +1,4 @@
-# EconomizaLista (nome provisório)
+# Economiza
 
 Aplicação Web para dispositivos móveis de lista de compras com comparação de preços entre mercados.
 
@@ -7,13 +7,12 @@ Aplicação Web para dispositivos móveis de lista de compras com comparação d
 
 ## Integrantes
 
-| Integrante | GitHub | Responsabilidade preliminar |
-|---|---|---|
-| NOME COMPLETO 1 | @usuario1 | Navegação entre telas, estrutura HTML e Service Worker |
-| NOME COMPLETO 2 | @usuario2 | Formulário, validação e mensagens de erro/sucesso |
-| NOME COMPLETO 3 | @usuario3 | Estado, localStorage, filtros e comparação de preços |
-| NOME COMPLETO 4 | @usuario4 | CSS responsivo, acessibilidade, recurso do dispositivo, README e relatório |
-
+| Integrante | GitHub |
+|---|---|
+| Carlos Victor Estevam Lenk | @victrmldy |
+| Lucas Clameirich da Silveira | @shori-ih |
+| João Pedro Souza Santos | @pedroojka |
+| Ryan Freitas Lima | @ryan1Freitas |
 ## Problema
 
 Ao fazer compras, muitas pessoas anotam a lista em papel ou de memória e não sabem em qual mercado cada produto está mais barato. Isso gera esquecimentos, gasto acima do planejado e perda de tempo. Faltam uma lista organizada por categoria e uma forma simples de comparar preços entre mercados.
@@ -60,7 +59,7 @@ Nas próximas etapas serão adicionados `service-worker.js` e os módulos em `js
 
 ## Como executar
 
-1. Clone o repositório: `git clone URL_DO_REPOSITORIO`
+1. Clone o repositório: `git clone https://github.com/victrmldy/appEconomiza/`
 2. Abra a pasta no VS Code.
 3. Execute com a extensão Live Server (ou outro servidor local) e faça o primeiro carregamento online.
 4. Navegador utilizado nos testes: a definir.
