@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Lista de compras com comparação de preços entre mercados (projeto acadêmico).">
+  <title>EconomizaLista</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topo">
+    <h1>EconomizaLista</h1>
+    <span id="status-conexao" class="status" role="status">Verificando conexão...</span>
+  </header>
+
+  <main>
+    <section id="inicio" class="tela" aria-labelledby="t-inicio">
+      <h2 id="t-inicio">Início</h2>
+      <p>Monte sua lista de compras e descubra onde cada produto sai mais barato.</p>
+      <p class="aviso">Projeto acadêmico com dados fictícios.</p>
+    </section>
+
+    <section id="adicionar" class="tela" aria-labelledby="t-adicionar" hidden>
+      <h2 id="t-adicionar">Adicionar item</h2>
+      <p>Formulário de cadastro (nome, categoria, quantidade, mercado e preço) — em desenvolvimento.</p>
+    </section>
+
+    <section id="lista" class="tela" aria-labelledby="t-lista" hidden>
+      <h2 id="t-lista">Minha lista</h2>
+      <p>Listagem com filtros e comparação de preços — em desenvolvimento.</p>
+    </section>
+
+    <section id="sobre" class="tela" aria-labelledby="t-sobre" hidden>
+      <h2 id="t-sobre">Sobre o projeto</h2>
+      <p>Disciplina: Introdução ao Desenvolvimento para Dispositivos Móveis. Afya Centro Universitário Ji-Paraná/RO.</p>
+    </section>
+  </main>
+
+  <nav class="menu" aria-label="Navegação principal">
+    <a href="#inicio" data-rota="inicio">Início</a>
+    <a href="#adicionar" data-rota="adicionar">Adicionar</a>
+    <a href="#lista" data-rota="lista">Lista</a>
+    <a href="#sobre" data-rota="sobre">Sobre</a>
+  </nav>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
