@@ -1,0 +1,10 @@
+Lista de compras
+
+[ ] 2x Arroz 5 kg (Alimentos) - menor preço: R$ 27,90 em Mercado A
+[ ] 2x Feijão carioca 1 kg (Alimentos) - menor preço: R$ 7,99 em Mercado B
+[ ] 6x Leite integral 1 L (Alimentos) - menor preço: R$ 4,79 em Mercado C
+[ ] 1x Papel toalha (Outros) - menor preço: R$ 5,49 em Mercado A
+[ ] 2x Refrigerante 2 L (Bebidas) - menor preço: R$ 8,99 em Mercado C
+[ ] 1x Sabão em pó 1,6 kg (Limpeza) - menor preço: R$ 18,99 em Mercado C
+[x] 3x Detergente 500 ml (Limpeza) - menor preço: R$ 2,49 em Mercado B
+[x] 4x Sabonete (Higiene) - menor preço: R$ 1,95 em Mercado B

@@ -1,0 +1,154 @@
+[
+  {
+    "id": "1795734868596-951e4170a5c31",
+    "nome": "Arroz 5 kg",
+    "categoria": "Alimentos",
+    "quantidade": 2,
+    "comprado": false,
+    "precos": [
+      {
+        "mercado": "Mercado A",
+        "valor": 27.9
+      }
+    ],
+    "criadoEm": "2026-11-26T23:14:28.596Z"
+  },
+  {
+    "id": "1795734868846-365ea0910356f",
+    "nome": "Feijão carioca 1 kg",
+    "categoria": "Alimentos",
+    "quantidade": 2,
+    "comprado": false,
+    "precos": [
+      {
+        "mercado": "Mercado A",
+        "valor": 8.49
+      },
+      {
+        "mercado": "Mercado B",
+        "valor": 7.99
+      },
+      {
+        "mercado": "Mercado C",
+        "valor": 8.29
+      }
+    ],
+    "criadoEm": "2026-11-26T23:14:28.846Z"
+  },
+  {
+    "id": "1795734868846-5cadcee2dbf78",
+    "nome": "Leite integral 1 L",
+    "categoria": "Alimentos",
+    "quantidade": 6,
+    "comprado": false,
+    "precos": [
+      {
+        "mercado": "Mercado A",
+        "valor": 4.99
+      },
+      {
+        "mercado": "Mercado B",
+        "valor": 5.19
+      },
+      {
+        "mercado": "Mercado C",
+        "valor": 4.79
+      }
+    ],
+    "criadoEm": "2026-11-26T23:14:28.846Z"
+  },
+  {
+    "id": "1795734868846-6ccd8b736e4068",
+    "nome": "Sabão em pó 1,6 kg",
+    "categoria": "Limpeza",
+    "quantidade": 1,
+    "comprado": false,
+    "precos": [
+      {
+        "mercado": "Mercado A",
+        "valor": 19.9
+      },
+      {
+        "mercado": "Mercado B",
+        "valor": 21.5
+      },
+      {
+        "mercado": "Mercado C",
+        "valor": 18.99
+      }
+    ],
+    "criadoEm": "2026-11-26T23:14:28.846Z"
+  },
+  {
+    "id": "1795734868846-9ecd5d2f40b458",
+    "nome": "Detergente 500 ml",
+    "categoria": "Limpeza",
+    "quantidade": 3,
+    "comprado": true,
+    "precos": [
+      {
+        "mercado": "Mercado A",
+        "valor": 2.79
+      },
+      {
+        "mercado": "Mercado B",
+        "valor": 2.49
+      },
+      {
+        "mercado": "Mercado C",
+        "valor": 2.99
+      }
+    ],
+    "criadoEm": "2026-11-26T23:14:28.846Z"
+  },
+  {
+    "id": "1795734868846-7be8bff1d46d5",
+    "nome": "Sabonete",
+    "categoria": "Higiene",
+    "quantidade": 4,
+    "comprado": true,
+    "precos": [
+      {
+        "mercado": "Mercado A",
+        "valor": 2.1
+      },
+      {
+        "mercado": "Mercado B",
+        "valor": 1.95
+      }
+    ],
+    "criadoEm": "2026-11-26T23:14:28.846Z"
+  },
+  {
+    "id": "1795734868846-44bb1d6a375eb8",
+    "nome": "Refrigerante 2 L",
+    "categoria": "Bebidas",
+    "quantidade": 2,
+    "comprado": false,
+    "precos": [
+      {
+        "mercado": "Mercado C",
+        "valor": 8.99
+      }
+    ],
+    "criadoEm": "2026-11-26T23:14:28.846Z"
+  },
+  {
+    "id": "1795734868846-c1dbd944045de",
+    "nome": "Papel toalha",
+    "categoria": "Outros",
+    "quantidade": 1,
+    "comprado": false,
+    "precos": [
+      {
+        "mercado": "Mercado C",
+        "valor": 6.5
+      },
+      {
+        "mercado": "Mercado A",
+        "valor": 5.49
+      }
+    ],
+    "criadoEm": "2026-11-26T23:14:28.846Z"
+  }
+]
