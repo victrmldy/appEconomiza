@@ -1,4 +1,79 @@
 {
   "categorias": ["Alimentos", "Limpeza", "Higiene", "Bebidas", "Outros"],
-  "mercados": ["Mercado A (fictício)", "Mercado B (fictício)", "Mercado C (fictício)"]
+  "mercados": ["Mercado A", "Mercado B", "Mercado C"],
+  "itensIniciais": [
+    {
+      "nome": "Arroz 5 kg",
+      "categoria": "Alimentos",
+      "quantidade": 1,
+      "precos": [
+        { "mercado": "Mercado A", "valor": 27.9 },
+        { "mercado": "Mercado B", "valor": 25.49 },
+        { "mercado": "Mercado C", "valor": 26.8 }
+      ]
+    },
+    {
+      "nome": "Feijão carioca 1 kg",
+      "categoria": "Alimentos",
+      "quantidade": 2,
+      "precos": [
+        { "mercado": "Mercado A", "valor": 8.49 },
+        { "mercado": "Mercado B", "valor": 7.99 },
+        { "mercado": "Mercado C", "valor": 8.29 }
+      ]
+    },
+    {
+      "nome": "Leite integral 1 L",
+      "categoria": "Alimentos",
+      "quantidade": 6,
+      "precos": [
+        { "mercado": "Mercado A", "valor": 4.99 },
+        { "mercado": "Mercado B", "valor": 5.19 },
+        { "mercado": "Mercado C", "valor": 4.79 }
+      ]
+    },
+    {
+      "nome": "Sabão em pó 1,6 kg",
+      "categoria": "Limpeza",
+      "quantidade": 1,
+      "precos": [
+        { "mercado": "Mercado A", "valor": 19.9 },
+        { "mercado": "Mercado B", "valor": 21.5 },
+        { "mercado": "Mercado C", "valor": 18.99 }
+      ]
+    },
+    {
+      "nome": "Detergente 500 ml",
+      "categoria": "Limpeza",
+      "quantidade": 3,
+      "precos": [
+        { "mercado": "Mercado A", "valor": 2.79 },
+        { "mercado": "Mercado B", "valor": 2.49 },
+        { "mercado": "Mercado C", "valor": 2.99 }
+      ]
+    },
+    {
+      "nome": "Sabonete",
+      "categoria": "Higiene",
+      "quantidade": 4,
+      "precos": [
+        { "mercado": "Mercado A", "valor": 2.1 },
+        { "mercado": "Mercado B", "valor": 1.95 }
+      ]
+    },
+    {
+      "nome": "Refrigerante 2 L",
+      "categoria": "Bebidas",
+      "quantidade": 2,
+      "precos": [
+        { "mercado": "Mercado C", "valor": 8.99 }
+      ]
+    },
+    {
+      "nome": "Papel toalha",
+      "categoria": "Outros",
+      "quantidade": 1,
+      "precos": []
+    }
+  ]
 }
