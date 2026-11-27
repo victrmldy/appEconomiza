@@ -1,0 +1,17 @@
+Cache: economiza-lista-v1
+/
+/index.html
+/css/style.css
+/data/dados.json
+/assets/imagens/icone.svg
+/js/app.js
+/js/armazenamento.js
+/js/comparacao.js
+/js/conexao.js
+/js/dados.js
+/js/dispositivo.js
+/js/estado.js
+/js/formatacao.js
+/js/interface.js
+/js/navegacao.js
+/js/validacao.js
