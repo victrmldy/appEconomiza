@@ -2,37 +2,114 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Lista de compras com comparação de preços entre mercados (projeto acadêmico).">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#14532d">
+  <meta name="description" content="Lista de compras com comparação de preços entre mercados.">
   <title>EconomizaLista</title>
+  <link rel="icon" href="assets/imagens/icone.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="topo">
-    <h1>EconomizaLista</h1>
-    <span id="status-conexao" class="status" role="status">Verificando conexão...</span>
+    <h1 class="marca">EconomizaLista</h1>
+    <p id="status-conexao" class="status" role="status"></p>
   </header>
 
-  <main>
-    <section id="inicio" class="tela" aria-labelledby="t-inicio">
-      <h2 id="t-inicio">Início</h2>
-      <p>Monte sua lista de compras e descubra onde cada produto sai mais barato.</p>
-      <p class="aviso">Projeto acadêmico com dados fictícios.</p>
+  <div id="aviso-dados" class="aviso" role="alert" hidden>
+    <span id="texto-aviso-dados"></span>
+    <button id="recarregar-dados" class="claro" type="button">Tentar novamente</button>
+  </div>
+
+  <main class="conteudo">
+    <section data-tela="inicio" aria-labelledby="titulo-inicio">
+      <h2 id="titulo-inicio" tabindex="-1">Bem-vindo</h2>
+      <p>Monte sua lista de compras, separe os itens por categoria e compare o preço de cada produto em diferentes mercados.</p>
+      <p id="resumo-inicio" class="secundario"></p>
+      <div class="acoes">
+        <a class="botao" href="#adicionar">Adicionar item</a>
+        <a class="botao claro" href="#lista">Ver minha lista</a>
+      </div>
     </section>
 
-    <section id="adicionar" class="tela" aria-labelledby="t-adicionar" hidden>
-      <h2 id="t-adicionar">Adicionar item</h2>
-      <p>Formulário de cadastro (nome, categoria, quantidade, mercado e preço) — em desenvolvimento.</p>
+    <section data-tela="adicionar" aria-labelledby="titulo-adicionar" hidden>
+      <h2 id="titulo-adicionar" tabindex="-1">Adicionar item</h2>
+      <p class="secundario">Campos marcados com * são obrigatórios. O preço é opcional e pode ser registrado depois.</p>
+      <p id="status-dados" role="status"></p>
+
+      <form id="form-item" novalidate>
+        <label for="nome">Nome do produto *</label>
+        <input id="nome" name="nome" maxlength="60" autocomplete="off" aria-describedby="erro-nome">
+        <span id="erro-nome" class="erro"></span>
+
+        <label for="categoria">Categoria *</label>
+        <select id="categoria" name="categoria" aria-describedby="erro-categoria"></select>
+        <span id="erro-categoria" class="erro"></span>
+
+        <label for="quantidade">Quantidade *</label>
+        <input id="quantidade" name="quantidade" type="number" inputmode="numeric" min="1" max="99" step="1" value="1" aria-describedby="erro-quantidade">
+        <span id="erro-quantidade" class="erro"></span>
+
+        <h3>Preço em um mercado (opcional)</h3>
+
+        <label for="mercado">Mercado</label>
+        <select id="mercado" name="mercado" aria-describedby="erro-mercado"></select>
+        <span id="erro-mercado" class="erro"></span>
+
+        <label for="preco">Preço unitário (R$)</label>
+        <input id="preco" name="preco" inputmode="decimal" maxlength="9" autocomplete="off" placeholder="0,00" aria-describedby="erro-preco">
+        <span id="erro-preco" class="erro"></span>
+
+        <button class="primario" type="submit">Adicionar à lista</button>
+      </form>
+      <p id="mensagem-formulario" role="status" aria-live="polite"></p>
     </section>
 
-    <section id="lista" class="tela" aria-labelledby="t-lista" hidden>
-      <h2 id="t-lista">Minha lista</h2>
-      <p>Listagem com filtros e comparação de preços — em desenvolvimento.</p>
+    <section data-tela="lista" aria-labelledby="titulo-lista" hidden>
+      <h2 id="titulo-lista" tabindex="-1">Minha lista</h2>
+
+      <dl class="indicadores">
+        <div><dt>Itens</dt><dd id="indicador-itens">0</dd></div>
+        <div><dt>Pendentes</dt><dd id="indicador-pendentes">0</dd></div>
+        <div><dt>Mercados</dt><dd id="indicador-mercados">0</dd></div>
+        <div><dt>Estimativa</dt><dd id="indicador-estimativa">R$ 0,00</dd></div>
+      </dl>
+      <p id="nota-estimativa" class="secundario"></p>
+
+      <div class="filtros">
+        <div>
+          <label for="filtro-categoria">Categoria</label>
+          <select id="filtro-categoria"></select>
+        </div>
+        <div>
+          <label for="filtro-situacao">Situação</label>
+          <select id="filtro-situacao">
+            <option value="todos">Todos</option>
+            <option value="pendentes">Pendentes</option>
+            <option value="comprados">Comprados</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="acoes">
+        <button id="compartilhar" type="button">Compartilhar lista</button>
+        <button id="carregar-exemplos" class="claro" type="button">Carregar exemplos</button>
+        <button id="remover-comprados" class="perigo" type="button">Remover comprados</button>
+      </div>
+
+      <p id="mensagem-lista" role="status" aria-live="polite"></p>
+      <ul id="lista-itens" class="lista"></ul>
     </section>
 
-    <section id="sobre" class="tela" aria-labelledby="t-sobre" hidden>
-      <h2 id="t-sobre">Sobre o projeto</h2>
-      <p>Disciplina: Introdução ao Desenvolvimento para Dispositivos Móveis. Afya Centro Universitário Ji-Paraná/RO.</p>
+    <section data-tela="sobre" aria-labelledby="titulo-sobre" hidden>
+      <h2 id="titulo-sobre" tabindex="-1">Sobre o projeto</h2>
+      <p>O EconomizaLista ajuda a organizar as compras por categoria e a descobrir em qual mercado cada produto custa menos.</p>
+      <p>Projeto acadêmico da disciplina Introdução ao Desenvolvimento para Dispositivos Móveis, da Afya Centro Universitário Ji-Paraná/RO, sob orientação do professor Romário Vitorino Ferreira.</p>
+      <ul>
+        <li>Produtos, mercados e preços são fictícios e não representam estabelecimentos reais.</li>
+        <li>Os dados ficam salvos somente neste aparelho, no navegador.</li>
+        <li>Depois do primeiro carregamento online, o aplicativo abre sem conexão.</li>
+        <li>Integrantes e responsabilidades estão descritos no README do repositório.</li>
+      </ul>
     </section>
   </main>
 
@@ -43,6 +120,6 @@
     <a href="#sobre" data-rota="sobre">Sobre</a>
   </nav>
 
-  <script src="js/app.js"></script>
+  <script type="module" src="js/app.js"></script>
 </body>
 </html>
